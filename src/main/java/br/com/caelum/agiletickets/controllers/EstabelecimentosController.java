@@ -47,7 +47,10 @@ public class EstabelecimentosController {
 		result.redirectTo(this).lista();
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 88d04905d51ec68ddda85d0f757344c64ce46aea
+=======
+>>>>>>> 6b4c432d2ebcc9be9cd11e722ed2b7132f15792a
 }

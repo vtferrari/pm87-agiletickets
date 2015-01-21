@@ -39,6 +39,9 @@ public class EspetaculosController {
 	private Agenda agenda;
 	private DiretorioDeEstabelecimentos estabelecimentos;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6b4c432d2ebcc9be9cd11e722ed2b7132f15792a
 	
 	/** @deprecated CDI eyes only*/
 	protected EspetaculosController() {
@@ -162,5 +165,8 @@ public class EspetaculosController {
 		validator.onErrorUse(status()).notFound();
 		return espetaculo;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b4c432d2ebcc9be9cd11e722ed2b7132f15792a
 }
