@@ -150,5 +150,8 @@ public class EspetaculosController {
 		validator.onErrorUse(status()).notFound();
 		return espetaculo;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8aaaf5da5483ce2fc7d1963f12ee6cf5fff10723
 }

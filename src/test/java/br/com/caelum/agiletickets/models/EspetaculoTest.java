@@ -3,6 +3,12 @@ package br.com.caelum.agiletickets.models;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
+import junit.framework.Assert;
+
+import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 import org.junit.Test;
 
 public class EspetaculoTest {
@@ -81,4 +87,39 @@ public class EspetaculoTest {
 		return sessao;
 	}
 	
+	@Test
+	public void criaUmaUnicaSessaoParaEspetaculo() {
+		Espetaculo espetaculo = new Espetaculo();
+		LocalDate inicio = LocalDate.now();
+		LocalDate fim = LocalDate.now();
+		LocalTime horario = LocalTime.now();
+		Periodicidade periodicidade = Periodicidade.DIARIA;
+		
+		List<Sessao> sessoes = espetaculo.criaSessoes(inicio, fim, horario, periodicidade);
+		Assert.assertEquals(1, sessoes.size());
+	}
+
+	@Test
+	public void criaEspetaculoDiariamente7Dias(){
+		Espetaculo espetaculo = new Espetaculo();
+		LocalDate inicio = LocalDate.now();
+		LocalDate fim = LocalDate.now().plusWeeks(1);
+		LocalTime horario = LocalTime.now();
+		Periodicidade periodicidade = Periodicidade.DIARIA;
+		
+		List<Sessao> sessoes = espetaculo.criaSessoes(inicio, fim, horario, periodicidade);
+		Assert.assertEquals(8, sessoes.size());
+	}
+
+	@Test
+	public void criaEspetaculoSemanal1Semana(){
+		Espetaculo espetaculo = new Espetaculo();
+		LocalDate inicio = LocalDate.now();
+		LocalDate fim = LocalDate.now().plusWeeks(1);
+		LocalTime horario = LocalTime.now();
+		Periodicidade periodicidade = Periodicidade.SEMANAL;
+		
+		List<Sessao> sessoes = espetaculo.criaSessoes(inicio, fim, horario, periodicidade);
+		Assert.assertEquals(2, sessoes.size());
+	}
 }
