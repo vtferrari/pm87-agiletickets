@@ -10,25 +10,16 @@ public class CalculadoraDePrecos {
 	public static BigDecimal calcula(Sessao sessao, Integer quantidade) {
 		BigDecimal preco;
 		
-		if(sessao.getEspetaculo().getTipo().equals(TipoDeEspetaculo.CINEMA) || 
-				sessao.getEspetaculo().getTipo().equals(TipoDeEspetaculo.SHOW)) {
-			
+		if(sessao.getEspetaculo().getTipo().equals(TipoDeEspetaculo.CINEMA) || sessao.getEspetaculo().getTipo().equals(TipoDeEspetaculo.SHOW)) {
 			preco = porcento(sessao,0.05,0.10);
-		
 		} else if(sessao.getEspetaculo().getTipo().equals(TipoDeEspetaculo.BALLET)) {
-			
 			preco = porcento(sessao,0.50,0.20);
 			preco = acrescenta10Porcento(sessao, preco);
-		
 		} else if(sessao.getEspetaculo().getTipo().equals(TipoDeEspetaculo.ORQUESTRA)) {
-			
 			preco = porcento(sessao,0.50,0.20);
 			preco = acrescenta10Porcento(sessao, preco);
-		
 		}  else {
-			
 			preco = sessao.getPreco();
-		
 		} 
 
 		return preco.multiply(BigDecimal.valueOf(quantidade));
