@@ -13,9 +13,7 @@ public class Sala {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-<<<<<<< HEAD
-=======
-	@Column
+
 	private String numero;
->>>>>>> 82a2c5162d400ef91f4db4ffca44f2f7eca29716
+
 }

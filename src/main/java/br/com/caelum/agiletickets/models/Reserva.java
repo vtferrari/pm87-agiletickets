@@ -14,12 +14,9 @@ public class Reserva {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-<<<<<<< HEAD
-=======
+
 	@Column
 	private String cadeira;
 
->>>>>>> 82a2c5162d400ef91f4db4ffca44f2f7eca29716
-	@ManyToOne
 	private Espetaculo espetaculo;
 }
